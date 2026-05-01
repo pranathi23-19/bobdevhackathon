@@ -1,7 +1,17 @@
-const brain = require('brain.js');
 const EventEmitter = require('events');
 const config = require('../../config/default');
 const logger = require('../utils/logger');
+
+// Try to load brain.js, but handle GPU/WebGL errors gracefully
+let brain;
+try {
+  brain = require('brain.js');
+} catch (error) {
+  logger.warn('Failed to load brain.js with GPU support, using CPU-only fallback');
+  // Set environment variable to disable GPU before requiring
+  process.env.BRAIN_GPU = 'false';
+  brain = require('brain.js');
+}
 
 class RiskPredictor extends EventEmitter {
   constructor() {
@@ -20,13 +30,15 @@ class RiskPredictor extends EventEmitter {
   initialize() {
     logger.info('Initializing risk prediction neural network...');
     
+    // Use CPU mode to avoid GPU/WebGL dependencies
     this.network = new brain.NeuralNetwork({
       hiddenLayers: [10, 8, 6],
       activation: 'sigmoid',
       learningRate: this.learningRate,
+      gpu: false, // Disable GPU to avoid native module compilation issues
     });
 
-    logger.info('Neural network initialized');
+    logger.info('Neural network initialized (CPU mode)');
     this.emit('initialized');
   }
 
