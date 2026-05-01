@@ -3,6 +3,19 @@
 ## 💡 Overview
 An advanced AI-powered system that predicts organizational failures by analyzing system logs, developer activity, and code changes to identify potential outages, team bottlenecks, and delivery risks.
 
+**🤖 NEW: AI ROOT CAUSE ANALYZER!**
+- **Instant error analysis** - 2 seconds vs 30-60 minutes manual log reading
+- **Real-time error spike detection** with live charts
+- **Watson AI identifies root causes** automatically
+- **Actionable solutions** provided for each issue
+- **No manual log reading required!**
+
+**🌩️ POWERED BY IBM CLOUD**
+- Watson AI-powered analysis
+- Real-time cloud monitoring
+- Infrastructure health tracking
+- Downtime simulation for testing
+
 ## 🎯 Key Features
 
 ### 1. **Multi-Source Data Analysis**
@@ -81,6 +94,7 @@ An advanced AI-powered system that predicts organizational failures by analyzing
 - Node.js 18+
 - Git
 - Access to system logs (optional: ELK stack, Splunk, or CloudWatch)
+- IBM Cloud account (optional - works in demo mode without credentials)
 
 ### Installation
 
@@ -94,11 +108,61 @@ npm install
 
 # Configure environment
 cp .env.example .env
-# Edit .env with your configuration
+# Edit .env with your configuration (IBM Cloud credentials optional)
 
 # Run the application
 npm start
 ```
+
+### 🤖 AI Root Cause Analyzer (RECOMMENDED!)
+
+**The fastest way to see AI in action:**
+
+```bash
+npm start
+# Open: http://localhost:3000/ai-dashboard.html
+```
+
+**What you'll see:**
+- 📊 **Live error monitoring** - Real-time chart updates every 3 seconds
+- ⚠️ **Automatic spike detection** - Alerts when errors exceed threshold
+- 🤖 **One-click AI analysis** - Click "Analyze with AI" button
+- 🎯 **Instant root causes** - AI identifies top 3 causes in 2-3 seconds
+- 💡 **Actionable solutions** - Step-by-step fixes for each issue
+- 🔥 **Simulate errors** - Test with one-click error spike simulation
+
+**Perfect for demos!** Shows the power of AI vs manual log reading.
+
+### 🌩️ IBM Cloud Enhanced Dashboard
+
+For full IBM Cloud monitoring with downtime simulation:
+
+```bash
+npm start
+# Open: http://localhost:3000/dashboard.html
+```
+
+**Features:**
+- 🎨 Modern IBM Design Language UI
+- ☁️ Real-time IBM Cloud health monitoring
+- 📊 Infrastructure metrics dashboard
+- ⚠️ Downtime simulation for testing (60 seconds)
+- 💡 AI-powered recommendations
+- 🔄 Auto-refresh capabilities
+
+### 📱 All Available Dashboards
+
+1. **AI Root Cause Analyzer** ⭐ BEST FOR DEMOS
+   - URL: `http://localhost:3000/ai-dashboard.html`
+   - Shows: Real-time error analysis with instant AI root cause identification
+
+2. **IBM Cloud Dashboard**
+   - URL: `http://localhost:3000/dashboard.html`
+   - Shows: Full IBM Cloud integration with health monitoring
+
+3. **Original Dashboard**
+   - URL: `http://localhost:3000`
+   - Shows: Basic risk analysis interface
 
 ### Development Mode
 
@@ -207,18 +271,21 @@ The system tracks:
 ## 🛠️ Technology Stack
 
 - **Backend**: Node.js, Express
-- **ML/AI**: TensorFlow.js, Brain.js
+- **ML/AI**: TensorFlow.js, Brain.js, IBM Watson AI
+- **Cloud**: IBM Cloud, Watson Natural Language Understanding
 - **Data Processing**: Apache Kafka (optional), Bull Queue
 - **Storage**: MongoDB, Redis
-- **Monitoring**: Prometheus, Grafana
-- **Frontend**: React, D3.js for visualizations
+- **Monitoring**: Prometheus, Grafana, IBM Cloud Monitoring
+- **Frontend**: Vanilla JS, Modern CSS, IBM Design Language
 
 ## 📚 Documentation
 
+- [AI Dashboard Guide](./AI_DASHBOARD_GUIDE.md) ⭐ **START HERE!**
+- [IBM Cloud Setup Guide](./IBM_CLOUD_SETUP.md)
 - [API Documentation](./docs/API.md)
-- [ML Model Details](./docs/ML_MODEL.md)
-- [Deployment Guide](./docs/DEPLOYMENT.md)
-- [Contributing Guidelines](./docs/CONTRIBUTING.md)
+- [Quick Start Guide](./START_HERE.md)
+- [Testing Guide](./TESTING_GUIDE.md)
+- [UI Guide](./UI_GUIDE.md)
 
 ## 🤝 Contributing
 
@@ -232,11 +299,39 @@ MIT License - see [LICENSE](./LICENSE) file for details
 
 Built with ❤️ for the IBM Bob Hackathon
 
-## 🔗 Links
+## 🔗 Quick Links
 
-- [Demo Video](./docs/demo.md)
-- [Presentation Slides](./docs/presentation.pdf)
-- [Live Demo](https://demo-url.com)
+### 🎯 Best Demo Experience
+
+**5-Minute Demo Script:**
+1. Open `http://localhost:3000/ai-dashboard.html`
+2. Watch real-time error monitoring (30 seconds)
+3. Click "Simulate Error Spike" to create a spike
+4. Click "Analyze with AI" - see instant root cause analysis
+5. Show the detailed solutions provided by AI
+
+**Key Message:** "AI analyzes in 2 seconds what takes humans 30-60 minutes!"
+
+### Dashboards
+- **AI Root Cause Analyzer**: http://localhost:3000/ai-dashboard.html ⭐ **BEST**
+- **IBM Cloud Dashboard**: http://localhost:3000/dashboard.html
+- **Original Dashboard**: http://localhost:3000
+
+### Testing
+```bash
+# Test IBM Cloud integration
+node test-ibm-cloud.js
+
+# Test all API endpoints
+node integration-test.js
+```
+
+### Key Features
+1. **Real-Time Error Spikes**: Live chart shows errors as they happen
+2. **One-Click AI Analysis**: Instant root cause identification
+3. **Actionable Solutions**: AI provides step-by-step fixes
+4. **Downtime Simulation**: Test system behavior during outages
+5. **No Manual Log Reading**: AI does it all automatically
 
 ---
 

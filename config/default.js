@@ -135,6 +135,16 @@ module.exports = {
       username: process.env.JIRA_USERNAME || '',
       apiToken: process.env.JIRA_API_TOKEN || '',
     },
+    mongodb: {
+      enabled: process.env.MONGODB_LOGS_ENABLED === 'true',
+      uri: process.env.MONGODB_URI || 'mongodb://localhost:27017',
+      database: process.env.MONGODB_DATABASE || 'risk-predictor',
+      collection: process.env.MONGODB_LOGS_COLLECTION || 'application-logs',
+      options: {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+      },
+    },
   },
 
   performance: {

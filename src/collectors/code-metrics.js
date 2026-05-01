@@ -1,12 +1,11 @@
 const fs = require('fs').promises;
 const path = require('path');
-const glob = require('glob');
-const { promisify } = require('util');
+const { glob } = require('glob');
 const EventEmitter = require('events');
 const config = require('../../config/default');
 const logger = require('../utils/logger');
 
-const globAsync = promisify(glob);
+const globAsync = glob;
 
 class CodeMetrics extends EventEmitter {
   constructor() {
