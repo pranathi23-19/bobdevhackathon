@@ -1,0 +1,86 @@
+{
+  "name": "ai-organizational-risk-predictor",
+  "version": "1.0.0",
+  "description": "AI-powered system for predicting organizational failures through analysis of system logs, developer activity, and code changes",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "lint": "eslint src/**/*.js",
+    "lint:fix": "eslint src/**/*.js --fix",
+    "generate-data": "node src/utils/data-generator.js",
+    "analyze": "node src/cli/analyze.js",
+    "train-model": "node src/ml/train.js"
+  },
+  "keywords": [
+    "ai",
+    "machine-learning",
+    "risk-prediction",
+    "devops",
+    "organizational-analytics",
+    "failure-prediction",
+    "hackathon"
+  ],
+  "author": "IBM Bob Hackathon Team",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0",
+    "compression": "^1.7.4",
+    "body-parser": "^1.20.2",
+    "simple-git": "^3.20.0",
+    "glob": "^10.3.10",
+    "chokidar": "^3.5.3",
+    "winston": "^3.11.0",
+    "brain.js": "^2.0.0-beta.23",
+    "ml-regression": "^6.1.3",
+    "natural": "^6.10.0",
+    "compromise": "^14.10.0",
+    "moment": "^2.29.4",
+    "lodash": "^4.17.21",
+    "axios": "^1.6.2",
+    "bull": "^4.12.0",
+    "redis": "^4.6.11",
+    "mongoose": "^8.0.3",
+    "joi": "^17.11.0",
+    "jsonwebtoken": "^9.0.2",
+    "bcryptjs": "^2.4.3",
+    "node-cron": "^3.0.3",
+    "ws": "^8.15.1",
+    "socket.io": "^4.6.0",
+    "chart.js": "^4.4.1",
+    "d3": "^7.8.5",
+    "commander": "^11.1.0",
+    "chalk": "^4.1.2",
+    "ora": "^5.4.1",
+    "inquirer": "^8.2.6",
+    "table": "^6.8.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "jest": "^29.7.0",
+    "supertest": "^6.3.3",
+    "eslint": "^8.55.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "prettier": "^3.1.1",
+    "@types/node": "^20.10.5"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/ai-organizational-risk-predictor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/ai-organizational-risk-predictor/issues"
+  },
+  "homepage": "https://github.com/yourusername/ai-organizational-risk-predictor#readme"
+}
